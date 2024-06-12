@@ -12,24 +12,24 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     ]
     let [feature, inputs, inputs_, inputs__, inputs___] = text.split(" ")
    // if (!lister.includes(feature)) return conn.reply(m.chat, `*🚩 Ingresa el formato en que deseas descargar más el titulo de un video o musica de YouTube.*\n\nEjemplo : ${usedPrefix + command} *mp3* SUICIDAL-IDOL - ecstacy\n\nFormatos disponibles :\n${usedPrefix + command} *mp3*\n${usedPrefix + command} *mp3doc*\n${usedPrefix + command} *mp4*\n${usedPrefix + command} *mp4doc*`,  m, fake,)
-	  if (command == "اغنيه" || command == 'play2') {
+	  if (command == "أغنية" || command == 'play2') {
             if (!text) return conn.reply(m.chat, `*🚩 أدخل عنوان مقطع فيديو أو موسيقى*`,  m)
     await m.react('🕓')
     var res = await yts(text)
     var vid = res.videos[0]
     var q = '128kbps'
-const texto1 = `اغــنيــههة 乂 يـوتـيـوب\n
+const texto1 = `أغنية 乂 يـوتـيـوب\n
 	✩ *العنوان ∙* ${vid.title}\n
-        ✩ *المده ∙* ${vid.timestamp}\n
-        ✩ *المشاهده ∙* ${vid.views}\n
+        ✩ *المدة ∙* ${vid.timestamp}\n
+        ✩ *المشاهدة ∙* ${vid.views}\n
         ✩ *الفنان ∙* ${vid.author.name}\n
-        ✩ *مده النشر ∙* ${vid.ago}\n
+        ✩ *مدة النشر ∙* ${vid.ago}\n
         ✩ *الرابط ∙* ${'https://youtu.be/' + vid.videoId}\n`.trim()
 		
 await conn.sendButton(m.chat, texto1, wm, res.videos[0].thumbnail, [
 	['الصوت 📀', `${usedPrefix}mp3 ${text}`],
 	['الفيديو 🎥', `${usedPrefix}mp4 ${text}`]
-  ], null, [['قناتي ⚡', `https://whatsapp.com/channel/0029VaRygQcATRSk29RI4P1x`]], m)
+  ], null, [['مجموعتي ⚡', `https://chat.whatsapp.com/FQpcZrY7WfEEXN3AppwgBB`]], m)
 	  }
   
             if (command == "mp3") {
@@ -87,18 +87,18 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
     let res = await yts(text)
     let vid = res.videos[0]
     let q = '360p'
-	const texto1 = `يـؤتـيؤب 乂 ألأغنيه\n
+	const texto1 = `يـوتـيـوب 乂 مرحبا الأغنية\n
 	✩ *العنوان ∙* ${vid.title}\n
-        ✩ *المده ∙* ${vid.timestamp}\n
-        ✩ *المشاهده ∙* ${vid.views}\n
+        ✩ *المدة ∙* ${vid.timestamp}\n
+        ✩ *المشاهدة ∙* ${vid.views}\n
         ✩ *الفنان ∙* ${vid.author.name}\n
-        ✩ *مده النشر ∙* ${vid.ago}\n
+        ✩ *مدة النشر ∙* ${vid.ago}\n
         ✩ *الرابط ∙* ${'https://youtu.be/' + vid.videoId}\n`
 	/*
 await conn.sendButton(m.chat, wm, texto1, res.videos[0].thumbnail, [
 	['Creador', `${usedPrefix}creador`],
 	['Menu', `${usedPrefix}menu`]
-  ], null, [['قناتي ⚡', `${channel}`]], m)
+  ], null, [['مجموعتي ⚡', `${channel}`]], m)
        */
        try {
        let yt = await fg.ytv(vid.url, q)
@@ -132,16 +132,16 @@ if (size.split('MB')[0] >= limit) return conn.reply(m.chat,`يزن الملف أ
     let q = '128kbps'
 	const texto1 = `Y O U T U B E 乂 D O C\n
        ✩ *العنوان ∙* ${vid.title}\n
-       ✩ *المده ∙* ${vid.timestamp}\n
-       ✩ *المشاهده ∙* ${vid.views}\n
+       ✩ *المدة ∙* ${vid.timestamp}\n
+       ✩ *المشاهدة ∙* ${vid.views}\n
        ✩ *الفنان ∙* ${vid.author.name}\n
-       ✩ *مده النشر ∙* ${vid.ago}\n
+       ✩ *مدة النشر ∙* ${vid.ago}\n
        ✩ *الرابط ∙* ${'https://youtu.be/' + vid.videoId}\n`
 	   /* 
 await conn.sendButton(m.chat, wm, texto1, res.videos[0].thumbnail, [
 	['Creador', `${usedPrefix}creador`],
 	['Menu', `${usedPrefix}menu`]
-  ], null, [['قناتي ⚡', `${channel}`]], m)
+  ], null, [['مجموعتي ⚡', `${channel}`]], m)
 	    */
        try {
        let yt = await fg.yta(vid.url, q)
@@ -193,10 +193,10 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
     let q = '360p'
 	const texto1 = `يـؤتـيؤب 乂 ألأغنيه\n
 	✩ *العنوان ∙* ${vid.title}\n
-        ✩ *المده ∙* ${vid.timestamp}\n
-        ✩ *المشاهده ∙* ${vid.views}\n
+        ✩ *المدة ∙* ${vid.timestamp}\n
+        ✩ *المشاهدة ∙* ${vid.views}\n
         ✩ *الفنان ∙* ${vid.author.name}\n
-        ✩ *مده النشر ∙* ${vid.ago}\n
+        ✩ *مدة النشر ∙* ${vid.ago}\n
         ✩ *الرابط ∙* ${'https://youtu.be/' + vid.videoId}\n`
 	    /*
 await conn.sendButton(m.chat, wm, texto1, res.videos[0].thumbnail, [
@@ -249,6 +249,6 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
 }
 handler.help = ["play"].map(v => v + " <formato> <búsqueda>")
 handler.tags = ["downloader"]
-handler.command = ['اغنيه', 'play2', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
+handler.command = ['أغنية', 'play2', 'mp3', 'mp4', 'mp3doc', 'mp4doc']
 handler.star = 2
 export default handler
