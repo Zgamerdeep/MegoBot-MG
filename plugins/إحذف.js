@@ -1,7 +1,7 @@
 /* Creditos a https://github.com/FG98F */
 
 let handler = async (m, { conn, usedPrefix, command }) => {	
-if (!m.quoted) throw `*❮ ❗┇يجب ان تضع ريبلاي للرسالة الذي تريد حذفها❯*`
+if (!m.quoted) throw `*❮ ❗┇يجب أن تضع ريبلاي للرسالة الذي تريد حذفها❯*`
 try {
 let delet = m.message.extendedTextMessage.contextInfo.participant
 let bang = m.message.extendedTextMessage.contextInfo.stanzaId
@@ -11,7 +11,7 @@ return conn.sendMessage(m.chat, { delete: m.quoted.vM.key })
 }}
 handler.help = ['del', 'delete']
 handler.tags = ['group']
-handler.command = /^حذف|احذف(ete)?$/i
+handler.command = /^حذف|إحذف(ete)?$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
