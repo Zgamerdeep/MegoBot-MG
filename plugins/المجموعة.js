@@ -7,9 +7,9 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
     let text = `
-*✦⌈⇖ مــعـلــومـات الــجـروب ⇘⌋✦*
+*✦⌈⇖ مــعـلــومـات الــمجموعة ⇘⌋✦*
 
-*❖↫ الــأسـم : ${groupMetadata.subject}* 
+*❖↫ الــإسـم : ${groupMetadata.subject}* 
 
 *❖↫ الــأعـضاء : ${participants.length}*
 
@@ -18,18 +18,18 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 *❖↫ الــمشـرفــين :*
  ${listAdmin}
 
-❖↫ *تــكـويـن الــمـجمـوعـه :*
+❖↫ *تــكـويـن الــمـجمـوعـة :*
 *• ${isBanned ? '✅' : '❎'} الــحـظـر*
 *• ${welcome ? '✅' : '❎'} الــترحـيـب*
 *• ${detect ? '✅' : '❎'} الــكـاشـف*
 *• ${del ? '❎' : '✅'} الــحذف*
 *• ${antiLink ? '✅' : '❎'} حــذف الـروابــط*
 
-*❖↫ إعــدادات الــرسـالـه :*
+*❖↫ إعــدادات الــرسـالـة :*
 *• الــتـرحـيب:* ${sWelcome}
 *• الـوداع:* ${sBye}
-*• الـتــرقـيه:* ${sPromote}
-*• الــاعـفاء:* ${sDemote}
+*• الـتــرقـية:* ${sPromote}
+*• الــإعفاء:* ${sDemote}
 
 *❖↫ الــوصــف :*
 ${groupMetadata.desc?.toString() || '*لــا يـوجـد وصــف !*'}
@@ -39,7 +39,7 @@ ${groupMetadata.desc?.toString() || '*لــا يـوجـد وصــف !*'}
 
 handler.help = ['infogp']
 handler.tags = ['group']
-handler.command = ['infogrupo', 'groupinfo', 'الجروب'] 
+handler.command = ['infogrupo', 'groupinfo', 'المجموعة'] 
 handler.group = true
 
 export default handler
