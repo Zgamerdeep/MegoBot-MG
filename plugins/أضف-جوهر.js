@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
     if (!who) throw '✳️ منشن المستخدم'
     let txt = text.replace('@' + who.split`@`[0], '').trim()
     if (!txt) throw '✳️ أدخل المبلغ *الحد* الذي تريد إضافته'
-    if (isNaN(txt)) throw '🔢 مجرد ارقام'
+    if (isNaN(txt)) throw '🔢 مجرد أرقام'
     let dmt = parseInt(txt)
     let diamond = dmt
 
@@ -16,7 +16,7 @@ let handler = async (m, { conn, text }) => {
    users[who].diamond += dmt
 
     await m.reply(`≡ *💎 
-إضافة الماس*
+إضافة ألماس*
 ┌──────────────
 ▢ *Total:* ${dmt}
 └──────────────`)
@@ -26,7 +26,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ['adddi <@user>']
 handler.tags = ['econ']
-handler.command = ['adddi', 'ضيف_جواهر'] 
+handler.command = ['adddi', 'أضف_جواهر'] 
 handler.rowner = true
 
 export default handler
