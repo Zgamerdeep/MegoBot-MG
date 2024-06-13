@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('*تم ايجاد الشخص الاخر*')
+        m.reply('*تم إيجاد الشخص الآخر*')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'PLAYING'
@@ -27,7 +27,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             }[v]
         })
         let str = `
-انتظر @${room.game.currentTurn.split('@')[0]} هو اللاعب الاول
+انتظر @${room.game.currentTurn.split('@')[0]} هو اللآعب الأول
 
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
@@ -36,7 +36,7 @@ ${arr.slice(6).join('')}
 ▢ *Room ID* ${room.id}
 
 ❏ *القوانين*
-‣ اصنع 3 صفوف من الرموز عموديا, أفقيا او انحرافي للفوز ‣ اكتب *surrender* للانسحاب
+‣ اصنع 3 صفوف من الرموز عموديا, أفقيا أو إنحرافي للفوز ‣ أكتب *surrender* للإنسحاب
 `.trim()
         if (room.x !== room.o) await conn.reply(room.x, str, m, {
             mentions: conn.parseMention(str)
@@ -54,10 +54,10 @@ ${arr.slice(6).join('')}
         }
         if (text) room.name = text
 
-     conn.reply(m.chat, `❏ *توقع الشريك*\nاكتب الامر التالي للدخول في نفس الجيم
+     conn.reply(m.chat, `❏ *توقع الشريك*\nتكتب الأمر التالي للدخول في نفس الجيم
 ❏ *${usedPrefix + command} ${text}*
 
-❏ *الجائزه: 4999* اكس بي`, m, {
+❏ *الجائزة: 4999* اكس بي`, m, {
             mentions: conn.parseMention(text)
         })
 
@@ -68,6 +68,6 @@ ${arr.slice(6).join('')}
 
 handler.help = ['tictactoe <tag number>']
 handler.tags = ['game']
-handler.command = ['tictactoe', 'ttc', 'اكس', 'xo']
+handler.command = ['tictactoe', 'ttc', 'إكس', 'xo']
 
 export default handler
