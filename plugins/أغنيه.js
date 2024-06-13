@@ -14,7 +14,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
   if (!search) throw 'Video Not Found, Try Another Title';
   let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = ' 💝 mego BOT💝'; //حط اسم بوتك
+  let wm = ' 💝 Zoro Bot💝'; //حط اسم بوتك
 
   let captvid = `💝 جاري التحميل ♥`;
 
@@ -68,7 +68,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 
 handler.help = ['play'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = ['mp3', 'songs', 'ytmp3doc','اغنيه']
+handler.command = ['mp3', 'songs', 'ytmp3doc','أغنيه']
 
 handler.exp = 0;
 handler.diamond = false;
