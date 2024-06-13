@@ -13,11 +13,11 @@ let handler = async (m, { conn, text }) => {
     var number = text
   }
 
-  if(!text && !m.quoted) return conn.reply(m.chat, `*❏إعادة تعيين المستخدم*\n\nمنشن المستخدم, *اكتب الرقم أو قم بالرد على رسالة المستخدم الذي تريد *إعادة تعيينه`, m)
+  if(!text && !m.quoted) return conn.reply(m.chat, `*❏إعادة تعيين المستخدم*\n\nمنشن المستخدم, *أكتب الرقم أو قم بالرد على رسالة المستخدم الذي تريد *إعادة تعيينه`, m)
   //let exists = await conn.isOnWhatsApp(number)
   // if (exists) return conn.reply(m.chat, `*الرقم غير مسجل في واتس اب*`, m)
-  if(isNaN(number)) return conn.reply(m.chat, `*❏ إعادة تعيين المستخدم*\nالرقم الذي ادخلته خاطأً`, m)
- // if(number.length > 8) return conn.reply(m.chat, `*❏ إعادة تعيين المستخدم*\nالرقم الذي ادخلته خاطأً!`, m)
+  if(isNaN(number)) return conn.reply(m.chat, `*❏ إعادة تعيين المستخدم*\nالرقم الذي أدخلته خاطئ`, m)
+ // if(number.length > 8) return conn.reply(m.chat, `*❏ إعادة تعيين المستخدم*\nالرقم الذي أدخلته خاطئ!`, m)
   try {
     if(text) {
       var user = number + '@s.whatsapp.net'
